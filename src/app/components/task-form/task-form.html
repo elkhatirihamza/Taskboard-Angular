@@ -1,0 +1,31 @@
+<div class="form-container">
+    <h2>{{ isEdit ? 'Edit task' : 'New task' }}</h2>
+
+    <div>
+        <label for="title">Task name:</label><br>
+        <input id="title" type="text" name="title" [(ngModel)]="title">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="desc">Task description:</label><br>
+        <textarea id="desc" rows="5" cols="40" name="description" [(ngModel)]="description"></textarea>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="status">Task status:</label><br>
+        <select id="status" name="status" [(ngModel)]="status">
+            @for (s of statuses; track s) {
+                <option [value]="s">{{ s }}</option>
+            }
+        </select>
+    </div>
+
+    <br>
+
+    <button (click)="onSubmit()">{{ isEdit ? 'Save Task' : 'Create Task' }}</button>
+    <button (click)="onCancel()">Cancel</button>
+</div>

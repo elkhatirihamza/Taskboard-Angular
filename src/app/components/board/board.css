@@ -1,0 +1,44 @@
+h2 {
+    margin: 16px;
+}
+
+.board {
+    display: flex;
+    gap: 10px;
+    padding: 0 16px;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.column h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.task-card {
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 6px;
+}
+
+.task-title {
+    color: darkblue;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+
+.task-desc {
+    font-size: 0.85rem;
+    margin: 0 0 6px 0;
+}
+
+button {
+    margin-right: 4px;
+    cursor: pointer;
+}

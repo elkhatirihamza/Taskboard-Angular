@@ -1,0 +1,20 @@
+<h2>Task list</h2>
+
+<div class="board">
+    @for (status of statuses; track status) {
+        <div class="column">
+            <h3>{{ status }}</h3>
+            @for (task of getTasksByStatus(status); track task.id) {
+                <div class="task-card">
+                    <p class="task-title">#{{ task.id }} {{ task.title }}</p>
+                    <p class="task-desc">{{ task.description }}</p>
+                    <button (click)="onEdit(task)">Edit</button>
+                    <button (click)="onDelete(task)">Delete</button>
+                </div>
+            }
+            @if (getTasksByStatus(status).length === 0) {
+                <p>No tasks</p>
+            }
+        </div>
+    }
+</div>
